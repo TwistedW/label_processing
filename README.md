@@ -6,11 +6,11 @@ The code is tested on Linux operating system with Python 2.7 or 3.x, TensorFlow 
 #### label_processing
 *Name* | *All_classes* | *classes_style_by_style* 
 :---: | :---: | :---: |
-ACGAN | <img src = 'output/ACGAN_epoch028_test_all_classes.png' height = '230px'> | <img src = 'output/ACGAN_epoch028_test_all_classes_style_by_style.png' height = '120px'>
+ACGAN | <img src = 'output/ACGAN_epoch028_test_all_classes.png' height = '400px'> | <img src = 'output/ACGAN_epoch028_test_all_classes_style_by_style.png' height = '300px'>
 *Name* | *Black_Hair* | *Blond_Hair* 
-ACGAN | <img src = 'output/ACGAN_epoch028_test_class_Black.png' height = '230px'> | <img src = 'output/ACGAN_epoch028_test_class_Blond.png' height = '230px'>
+ACGAN | <img src = 'output/ACGAN_epoch028_test_class_Black.png' height = '400px'> | <img src = 'output/ACGAN_epoch028_test_class_Blond.png' height = '400px'>
   *Name* | *Brown_Hair* | *Gray_Hair* 
-ACGAN | <img src = 'output/ACGAN_epoch028_test_class_Brown.png' height = '230px'> | <img src = 'output/ACGAN_epoch028_test_class_Gray.png' height = '230px'>
+ACGAN | <img src = 'output/ACGAN_epoch028_test_class_Brown.png' height = '400px'> | <img src = 'output/ACGAN_epoch028_test_class_Gray.png' height = '400px'>
 
 author: 武广
 
