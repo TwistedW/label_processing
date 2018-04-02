@@ -107,6 +107,30 @@ def load_cifar10(dataset_name):
 
     #返回归一化的数据和标签数组
     return X, y_vec
+
+def load_svhn(dataset_name):
+    data_dir = os.path.join("./data/svhn", dataset_name)
+
+    mat = sp.io.loadmat(data_dir)
+    x_train = mat['X']
+
+    x_train = np.transpose(x_train, axes=[3, 0, 1, 2])
+    x_train = (x_train / 255.0).astype('float32')
+
+    indices = mat['y']
+    indices = np.squeeze(indices)
+    indices[indices == 10] = 0
+    y_train = np.zeros((len(indices), 10))
+    y_train[np.arange(len(indices)), indices] = 1
+    y_train = y_train.astype('float32')
+
+    seed = 547
+    np.random.seed(seed)  # 确保每次生成的随机数相同
+    np.random.shuffle(x_train)  # 将mnist数据集中数据的位置打乱
+    np.random.seed(seed)
+    np.random.shuffle(y_train)
+    return x_train, y_train
+
 def load_Hair(n_classes, dataset_name, input_fname_pattern):
     #just for your own file
     L1 = glob(os.path.join("./data", dataset_name, "Black_Hair", input_fname_pattern))
